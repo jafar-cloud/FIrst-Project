@@ -5,6 +5,10 @@ n4 = int(input('Enter Fourth Number: '))
 n5 = int(input('Enter Fifth Number: '))
 max = n1
 second_max = n2
+if n2 > max:
+    temp = max
+    max = n2
+    second_max = temp
 if n3 > max:
     temp = max
     max = n3
