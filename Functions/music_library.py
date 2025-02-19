@@ -18,8 +18,11 @@ def add(a):
         for i in a:
             library.append(i)
 
-def remove(b):
-    pass
+def remove_element_from_lib(b):
+    if b in library:
+        print(f"{b} already in library.")
+    else:
+        library.remove(b)
 
 
 while True:
@@ -48,7 +51,8 @@ while True:
                 break
     
     elif choice == 3:
-        pass
+        i = input("Enter the name of the music you want to remove: ")
+        remove_element_from_lib(i)
     elif choice == 4:
         print(library)
     elif choice == 5:
