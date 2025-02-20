@@ -16,20 +16,16 @@ def reverse_a_string(s):
 
 # print(reverse_a_string('abc'))
 
-def tower_of_hanoi(n):
+def tower_of_hanoi(n,x,y,z):
     if n == 1:
-        print("A -> B")
-
+        print(f"{x} -> {y}")
+    else:
+        tower_of_hanoi(n - 1,x,z,y)
+        print(f"{x} -> {y}")
+        tower_of_hanoi(n - 1,z,y,x)
         
 
+tower_of_hanoi(4,'A','B','C')
 
 
-# 
-#     
-#     
-#     
-# 
-#         1
-# 3       2 
-# A   B   C
 
